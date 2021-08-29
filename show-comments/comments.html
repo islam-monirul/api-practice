@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          #comments{
+               display: flex;
+               justify-content: center;
+               flex-wrap: wrap;
+          }
+
+          .commentBox{
+               width: 30%;
+               padding: 10px;
+               margin: 10px;
+               border: 1px solid #E9EBEC;
+               text-align: left;
+          }
+     </style>
+
+     <title>Show Comments</title>
+</head>
+<body>
+     <h1>Comments using API</h1>
+     <button onclick="loadComments()" style="margin-bottom: 20px;">Click to see Comments</button>
+
+     <section id="comments">
+
+     </section>
+
+     <script src="comments.js"></script>
+</body>
+</html>
