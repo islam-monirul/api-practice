@@ -1,8 +1,12 @@
+document.getElementById('error-message').style.display = 'none';
+
 const searchFood = () => {
      const searchField = document.getElementById('search-field');
      const searchText = searchField.value;
      console.log(searchText);
      
+     document.getElementById('error-message').style.display = 'none';
+
      // clear data
      searchField.value = '';
      if(searchText == ''){
@@ -14,6 +18,9 @@ const searchFood = () => {
      fetch(url)
           .then(res => res.json())
           .then(data => displaySearchResult(data.meals))
+          .catch( () => {
+               document.getElementById('error-message').style.display = 'block';
+          })
 }
 
 const displaySearchResult = (meals) => {
